@@ -20,13 +20,16 @@
 
             // Crear botones para cada mapa
             for (var i = 1; i <= cantidadMapas; i++) {
-                var boton = document.createElement("button");
-                boton.innerHTML = "Ir al Mapa " + i;
-                boton.onclick = function() {
-                    redireccionarMapa(i);
-                };
+                // Utilizar una función de flecha para capturar el valor de i
+                (function(numero) {
+                    var boton = document.createElement("button");
+                    boton.innerHTML = "Ir al Mapa " + numero;
+                    boton.onclick = function() {
+                        redireccionarMapa(numero);
+                    };
 
-                document.body.appendChild(boton);
+                    document.body.appendChild(boton);
+                })(i);
             }
         }
 
@@ -41,3 +44,4 @@
 
 </body>
 </html>
+
