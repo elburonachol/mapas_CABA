@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <script>
+        // Función para redireccionar a las páginas específicas
+        function redireccionarMapa(numero) {
+            // Construir la URL basada en el número proporcionado
+            var url = "https://elburonachol.github.io/mapas_CABA/mapa_" + numero;
+            
+            // Redireccionar a la URL
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Mi Página Principal</h1>
+
+    <!-- Botones para redireccionar a las páginas específicas -->
+    <button onclick="redireccionarMapa(1)">Ir al Mapa 1</button>
+    <button onclick="redireccionarMapa(2)">Ir al Mapa 2</button>
+
+    <!-- Contenido de tu página principal -->
+
+</body>
+</html>
