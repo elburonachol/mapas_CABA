@@ -13,14 +13,29 @@
             // Redireccionar a la URL
             window.location.href = url;
         }
+
+        // Función para generar botones automáticamente
+        function generarBotones() {
+            var cantidadMapas = 10; // Número total de mapas
+
+            // Crear botones para cada mapa
+            for (var i = 1; i <= cantidadMapas; i++) {
+                var boton = document.createElement("button");
+                boton.innerHTML = "Ir al Mapa " + i;
+                boton.onclick = function() {
+                    redireccionarMapa(i);
+                };
+
+                document.body.appendChild(boton);
+            }
+        }
+
+        // Llamar a la función para generar los botones al cargar la página
+        window.onload = generarBotones;
     </script>
 </head>
 <body>
     <h1>Mi Página Principal</h1>
-
-    <!-- Botones para redireccionar a las páginas específicas -->
-    <button onclick="redireccionarMapa(1)">Ir al Mapa 1</button>
-    <button onclick="redireccionarMapa(2)">Ir al Mapa 2</button>
 
     <!-- Contenido de tu página principal -->
 
